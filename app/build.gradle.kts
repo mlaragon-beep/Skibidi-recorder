@@ -1,3 +1,4 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -6,6 +7,7 @@ plugins {
 android {
     namespace = "com.mlrecorder.app"
     compileSdk = 35
+
     defaultConfig {
         applicationId = "com.mlrecorder.app"
         minSdk = 29
@@ -13,4 +15,13 @@ android {
         versionCode = 1
         versionName = "0.1.0"
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
